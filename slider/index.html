@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Slider</title>
+
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: #f8f9fb;
+      }
+
+      .testimonial-section {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .testimonial-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .testimonial-header h2 {
+        color: #013e5d;
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .custom-nav {
+        display: flex;
+        gap: 10px;
+      }
+
+      .custom-nav button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f96c85;
+        color: #fff;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .custom-nav button img {
+        width: 20px;
+      }
+      .custom-nav button:hover {
+        background: #e35870;
+      }
+      .testimonial-slider .testimonial {
+        background: rgba(242, 235, 227, 0.5);
+        padding: 30px 28px 28px 28px;
+        border-radius: 20px;
+        margin: 0 10px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.04);
+        text-align: left;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-image: url(quote.svg);
+        background-repeat: no-repeat;
+        /* background-position: bottom right;   */
+        background-position: right 32px bottom 32px;
+        background-size: 64px;
+      }
+
+      .testimonial p {
+        font-size: 20px;
+        color: #013e5d;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      .author-info {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        gap: 16px;
+      }
+      .author-info {
+        color: #013e5d;
+        font-size: 16px;
+      }
+      .author-info span {
+        opacity: 0.5;
+      }
+      .author-info-title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .icon-box {
+        width: 54px;
+        height: 58px;
+        position: absolute;
+        top: 20px;
+        right: 40%;
+        z-index: 99;
+      }
+      .icon-box img {
+        width: 54px;
+        height: 58px;
+      }
+      .author-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+
+      @media (max-width: 768px) {
+        .testimonial-slider .testimonial {
+          margin: 0 5px;
+        }
+
+        .testimonial-header {
+          /* flex-direction: column; */
+          align-items: flex-start;
+          gap: 15px;
+        }
+
+        .custom-nav {
+          align-self: flex-end;
+        }
+        .testimonial-header h2{
+          font-size: 22px;
+        }
+        .icon-box{
+          top: 30px;
+        }
+        .icon-box img {
+    width: 50px;
+    height: 50px;
+}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testimonial-section">
+      
+      <div class="testimonial-header">
+        <h2>What Pet Owners Are Saying...</h2>
+        <div class="custom-nav">
+          <button class="prev-custom">
+            <img src="arrow-left.png" alt="" />
+          </button>
+          <button class="next-custom">
+            <img src="arrow-right.png" alt="" />
+          </button>
+        </div>
+        <div class="icon-box">
+            <img src="icon.svg" alt="" />
+          </div>
+      </div>
+
+      <div class="testimonial-slider">
+          
+        <div class="testimonial">
+          <p>
+            Amet vitae egestas tellus eu enim, nibh condimentum in ut mauris
+            arcu, tempus euismod aliquet dictum sollicitudin congue fringilla
+            diam nisi volutpat diam pharetra quis lorem ut viverra condimentum
+            eu eget sed.”
+          </p>
+          <div class="author-info">
+            <img src="img-01.webp" alt="User" class="author-img" />
+            <div class="author-info-title">
+              <strong>Firstname Lastname</strong>
+              <span>Position</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            Amet vitae egestas tellus eu enim, nibh condimentum in ut mauris
+            arcu, tempus euismod aliquet dictum sollicitudin congue fringilla
+            diam nisi volutpat diam pharetra quis lorem ut viverra condimentum
+            eu eget sed.”
+          </p>
+          <div class="author-info">
+            <img src="img-02.webp" alt="User" class="author-img" />
+            <div class="author-info-title">
+              <strong>Firstname Lastname</strong>
+              <span>Position</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            Amet vitae egestas tellus eu enim, nibh condimentum in ut mauris
+            arcu, tempus euismod aliquet dictum sollicitudin congue fringilla
+            diam nisi volutpat diam pharetra quis lorem ut viverra condimentum
+            eu eget sed.”
+          </p>
+          <div class="author-info">
+            <img src="furbal.webp" alt="User" class="author-img" />
+            <div class="author-info-title">
+              <strong>Firstname Lastname</strong>
+              <span>Position</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            Amet vitae egestas tellus eu enim, nibh condimentum in ut mauris
+            arcu, tempus euismod aliquet dictum sollicitudin congue fringilla
+            diam nisi volutpat diam pharetra quis lorem ut viverra condimentum
+            eu eget sed.”
+          </p>
+          <div class="another-box"></div>
+          <div class="author-info">
+            <img src="jonah.webp" alt="User" class="author-img" />
+            <div class="author-info-title">
+              <strong>Firstname Lastname</strong>
+              <span>Position</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Slick Init + Custom Arrows + Autoplay + Heart Icon -->
+    <script>
+      $(document).ready(function () {
+        const $slider = $(".testimonial-slider");
+
+        $slider.on(
+          "init reInit afterChange",
+          function (event, slick, currentSlide) {
+            // Remove previous active
+            $(".testimonial").removeClass("active");
+
+            // Get center slide index
+            let centerIndex;
+            const slidesToShow = slick.options.slidesToShow;
+            const current = currentSlide || 0;
+
+            if (window.innerWidth < 768) {
+              centerIndex = current; // Only 1 visible on mobile
+            } else if (window.innerWidth < 1024) {
+              centerIndex = current + 0; // Middle of 2 — pick first
+            } else {
+              centerIndex = current + 1; // 3 visible, middle is index + 1
+            }
+
+            $(".testimonial").eq(centerIndex).addClass("active");
+          }
+        );
+
+        $slider.slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          pauseOnHover: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+
+        $(".prev-custom").click(function () {
+          $slider.slick("slickPrev");
+        });
+
+        $(".next-custom").click(function () {
+          $slider.slick("slickNext");
+        });
+      });
+    </script>
+  </body>
+</html>
